@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Navidad Alegre — Página</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: linear-gradient(to bottom,#fef6f6,#ffffff);
+            font-family: "Segoe UI", Roboto, sans-serif;
+            font-size: 18px;
+        }
+
+        header {
+            background:#c61b30;
+            color:#fff;
+            padding:25px;
+            text-align:center;
+            width:100%;
+            margin:0;
+        }
+
+        h1 { font-size:40px; }
+        h2 { color:#c61b30; font-weight:800; text-transform:uppercase; margin-top:8px; }
+
+        .sidebar-left .card-img-top,
+        .sidebar-right .card-img-top {
+            height:180px;
+            object-fit:cover;
+            border-radius:8px;
+        }
+
+        .carousel-img {
+            height:650px;
+            object-fit:cover;
+            border-radius:14px;
+            box-shadow:0 8px 24px rgba(0,0,0,0.25);
+        }
+
+        .card {
+            border:none;
+            border-radius:12px;
+            background:#fff8f8;
+            box-shadow:0 6px 18px rgba(0,0,0,0.08);
+        }
+
+        .meta-box {
+            background:#fff7f3;
+            border-left:6px solid #ffb84c;
+            padding:26px;
+            border-radius:12px;
+            box-shadow:0 6px 18px rgba(0,0,0,0.06);
+        }
+
+        .form-control { font-size:17px; padding:12px; }
+        .btn-elegante { background:#ffb84c; border:none; color:#fff; font-weight:700; font-size:18px; padding:10px 18px; border-radius:8px; }
+        .btn-elegante:hover { background:#e1a040; }
+
+        @media (max-width:991px){
+            .carousel-img { height:360px; }
+            .sidebar-left, .sidebar-right { margin-bottom:18px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🎄 Navidad Alegre</h1>
+    <p style="margin:4px 0 0; font-size:18px;">Comparte tu meta del año y envía tu carta a Santa</p>
+</header>
+
+<!-- PÁGINA COMPLETA SIN BORDES -->
+<div class="container-fluid mt-4">
+    <div class="row gx-4">
+
+        <!-- IZQUIERDA – PERSONAJES -->
+        <aside class="col-lg-3 sidebar-left">
+            <h2 class="text-center">Personajes</h2>
+
+            <!-- SANTA -->
+            <div class="card mb-3" onclick="verPersonaje(
+                'Santa Claus',
+                'https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/IHDZ5XEFHFCSPFTZRGEPDLDA6Q.jpg',
+                `El símbolo de los regalos, ilusión y magia navideña. El personaje de Santa Claus (Papá Noel) tiene raíces históricas y mitológicas: 
+San Nicolás de Mira: Se basa en un obispo cristiano del siglo IV en la actual Turquía, conocido por su generosidad y por dar regalos en secreto a los necesitados.
+Sinterklaas: En la tradición holandesa, este personaje (una evolución de San Nicolás) viajaba en un caballo blanco, y los colonos holandeses llevaron esta tradición a América del Norte (Nueva Ámsterdam, que se convertiría en Nueva York).
+Imagen Moderna: La imagen actual de Santa Claus como un hombre alegre y regordete que vive en el Polo Norte y usa un trineo volador fue popularizada en gran medida por la literatura y las campañas publicitarias del siglo XX, especialmente las de Coca-Cola en la década de 1930.`
+            )">
+                <img class="card-img-top" src="https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/IHDZ5XEFHFCSPFTZRGEPDLDA6Q.jpg">
+                <div class="card-body">
+                    <h5>Santa Claus</h5>
+                    <p>(Haz clic para ver completo)</p>
+                </div>
+            </div>
+
+            <!-- RENOS -->
+            <div class="card mb-3" onclick="verPersonaje(
+                '🦌 Los Renos',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hET1iZFQEBq0W3W5A_y8cU8YrBav671AB0WHDW2bLIDS5f70WmU07Pwc4qLFqXXLDG8&usqp=CAU',
+                `Los compañeros fieles del trineo de Santa. La conexión de los renos con Santa Claus es una adición literaria relativamente reciente:
+Poema de 1823: La asociación de los renos con Santa Claus se popularizó gracias al poema "A Visit from St. Nicholas" (comúnmente conocido como "The Night Before Christmas") de Clement Clarke Moore, publicado en 1823. En él, Santa aparece en un trineo en miniatura tirado por ocho pequeños renos voladores con nombres específicos (Dasher, Dancer, Prancer, Vixen, Comet, Cupid, Donner y Blitzen).
+Adaptación al Entorno: Los renos son animales reales que viven en las regiones árticas y están perfectamente adaptados al frío y la nieve, lo que los hace un símbolo visual ideal para el entorno invernal y la mítica casa de Santa en el Polo Norte.
+Rudolph: El reno más famoso, Rudolph, fue una invención posterior, creada en 1939 por Robert L. May para una campaña navideña de una tienda departamental`
+            )">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4hET1iZFQEBq0W3W5A_y8cU8YrBav671AB0WHDW2bLIDS5f70WmU07Pwc4qLFqXXLDG8&usqp=CAU">
+                <div class="card-body">
+                    <h5>🦌 Los Renos</h5>
+                    <p>(Haz clic para ver completo)</p>
+                </div>
+            </div>
+
+            <!-- MUÑECO DE NIEVE -->
+            <div class="card mb-3" onclick="verPersonaje(
+                '⛄ Muñeco de Nieve',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTR2FQSbUnr-ktzTV3xecFeyUiVpV0Xr4mvQ&s',
+                `El amigo más alegre del invierno nevado. Los muñecos de nieve son un símbolo cultural general del invierno:
+Símbolo Estacional: Los muñecos de nieve son una forma de arte efímera hecha con nieve real, una actividad común en las regiones que experimentan inviernos nevados. Representan la pureza, la sencillez y la alegría de la temporada de frío.
+Decoración Popular: Durante la época victoriana en el siglo XIX, cuando las celebraciones navideñas se centraron en la familia y la festividad, los muñecos de nieve se convirtieron en un motivo popular en tarjetas de felicitación y decoraciones, afianzando su estatus como símbolo invernal y, por extensión, navideño`
+            )">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTR2FQSbUnr-ktzTV3xecFeyUiVpV0Xr4mvQ&s">
+                <div class="card-body">
+                    <h5>⛄ Muñeco de Nieve</h5>
+                    <p>(Haz clic para ver completo)</p>
+                </div>
+            </div>
+
+            <!-- ¿QUÉ ES LA NAVIDAD? -->
+            <div class="card mb-3" onclick="verPersonaje(
+                '¿Qué es la Navidad?',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_SQKUqyZmcrx96VopQB623-vlCPUjbxGfA&s',
+                `Un tiempo de amor, unión, esperanza y alegría. La navidad es principalmente un momento de unión, reflexión y fortalecimiento de lazos afectivos. Más allá de las celebraciones religiosas o el consumismo, su valor principal reside en el tiempo de calidad que se pasa juntos, la creación de recuerdos y la transmisión de valores importantes`
+            )">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_SQKUqyZmcrx96VopQB623-vlCPUjbxGfA&s">
+                <div class="card-body">
+                    <h5> ¿Qué es la Navidad?</h5>
+                    <p>(Haz clic para ver completo)</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CENTRO – CONTENIDO PRINCIPAL -->
+        <main class="col-lg-6">
+
+            <!-- CARRUSEL -->
+            <section id="inicio">
+                <div id="carouselExample" class="carousel slide mb-4">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/elcomercio/IHDZ5XEFHFCSPFTZRGEPDLDA6Q.jpg" class="d-block w-100 carousel-img">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHeXSF5GY1nKj4SnKVKezXyDSHtSSpyJ-HPw&s" class="d-block w-100 carousel-img">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLd6CDjzy4scAkLPFZt8BMl5TfU45NJH7SmQ&s" class="d-block w-100 carousel-img">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- TEXTO CENTRAL -->
+            <section class="mb-4">
+                <h2 class="text-center">¿Qué es la Navidad?</h2>
+                <p style="font-size:19px;">
+                    La Navidad celebra la unión familiar, la esperanza y la generosidad.
+                    Su origen proviene del nacimiento de Jesús en Belén,
+                    mezclado con tradiciones de invierno como la decoración,
+                    los villancicos y los regalos.
+                </p>
+            </section>
+
+            <!-- META DEL AÑO -->
+            <section id="meta" class="mb-4">
+                <h2 class="text-center"> Meta de este año</h2>
+
+                <div class="meta-box mx-auto" style="max-width:700px;">
+                    <p>Escribe tu propósito principal para este nuevo año.</p>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control" placeholder="Mi meta es...">
+                        <button class="btn btn-elegante" type="button">Guardar Meta</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CARTA A SANTA -->
+            <section id="contacto" class="mb-5">
+                <h2 class="text-center mb-3">💌 Carta a Santa</h2>
+
+                <form action="guardar.php" method="POST" class="p-4 card">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Correo</label>
+                        <input type="email" class="form-control" name="correo" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Carta</label>
+                        <textarea class="form-control" name="mensaje" rows="6" placeholder="Querido Santa..." required></textarea>
+                    </div>
+
+                    <div class="d-grid">
+                        <button class="btn btn-elegante">Enviar Carta</button>
+                    </div>
+                </form>
+                <div class="text-center mt-4">
+    <a href="mostrar.php" class="btn btn-warning btn-lg">
+        📬 Ver cartas enviadas
+    </a>
+</div>
+
+            </section>
+
+        </main>
+
+        <!-- DERECHA – ORIGEN -->
+        <aside class="col-lg-3 sidebar-right">
+            <div class="card p-3">
+                <h4 class="mb-3">📜 Origen de la Navidad</h4>
+                <p style="font-size:17px;">
+                    El origen de la Navidad es una fusión de tradiciones paganas y cristianas. La Iglesia cristiana primitiva eligió la fecha del 25 de diciembre para conmemorar el nacimiento de Jesús, coincidiendo con festivales paganos del solsticio de invierno preexistentes, con el fin de facilitar la conversión de la población romana. 
+Orígenes Pagano y Cristiano
+Raíces Paganas: Antes del cristianismo, diversas culturas celebraban festivales alrededor del solsticio de invierno (el día más corto del año en el hemisferio norte, cerca del 21 o 22 de diciembre).
+Saturnales Romanas: Los romanos celebraban las Saturnales, un festival en honor a Saturno, el dios de la agricultura, que tenía lugar a mediados de diciembre y culminaba cerca del 25 de diciembre. Era una época de banquetes, intercambio de regalos y alegría.
+Dies Natalis Solis Invicti: El 25 de diciembre también se celebraba el "Nacimiento del Sol Invicto", un culto oriental que se convirtió en fiesta oficial del Imperio Romano a finales del siglo III. Esta fiesta celebraba el "renacimiento" del sol tras el solsticio, simbolizando la victoria de la luz sobre la oscuridad.
+Yule: Las tribus germánicas y nórdicas celebraban el Yule, un festival de invierno con tradiciones que incluían el uso de árboles de hoja perenne, que simbolizaban la vida y la luz.
+Adopción Cristiana: La Biblia no especifica la fecha exacta del nacimiento de Jesús. En el siglo IV, durante el reinado del primer emperador cristiano, Constantino, la Iglesia de Roma decidió establecer la Natividad (del latín nativitas, que significa 'nacimiento') el 25 de diciembre.
+Sustitución de Festividades: Al hacer coincidir el nacimiento de Cristo (considerado la "luz del mundo") con las festividades paganas existentes, la Iglesia buscó superponer y debilitar las tradiciones no cristianas, facilitando que la población adoptara la nueva fe. 
+Con el tiempo, la celebración cristiana absorbió muchas de las costumbres y simbolismos paganos, como la decoración con árboles de hoja perenne y el intercambio de regalos, transformándolos en las tradiciones navideñas que se conocen hoy en día.
+                </p>
+                <img class="card-img-top mt-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfsmt0Dn5LJduBmDbXVnyCcivMm-fvVJ2A3RtgN3KXiiL9WXpc0_h8LFPfQJbeEEwQi4E&usqp=CAU">
+            </div>
+        </aside>
+
+    </div>
+</div>
+
+<footer class="text-center mt-5 p-3" style="background:#c61b30; color:#fff;">
+    Navidad Alegre — ¡Felices fiestas! 🎄✨
+</footer>
+
+<!-- MODAL PARA VER INFORMACIÓN COMPLETA DEL PERSONAJE -->
+<div class="modal fade" id="modalPersonaje" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header" style="background:#c61b30; color:white;">
+        <h5 class="modal-title" id="modalTitulo"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img id="modalImagen" src="" class="img-fluid mb-3" style="border-radius:12px;">
+        <p id="modalTexto" style="font-size:18px;"></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function verPersonaje(titulo, imagen, texto){
+    document.getElementById("modalTitulo").innerText = titulo;
+    document.getElementById("modalImagen").src = imagen;
+    document.getElementById("modalTexto").innerText = texto;
+
+    var modal = new bootstrap.Modal(document.getElementById('modalPersonaje'));
+    modal.show();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- NIEVE -->
+<style>
+.nieve {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.nieve span {
+    position: absolute;
+    top: -10px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.9;
+    filter: blur(1px);
+    animation: caer linear infinite;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+</style>
+
+<div class="nieve" id="nieve"></div>
+
+<script>
+const contenedor = document.getElementById("nieve");
+
+function crearCopo() {
+    const copo = document.createElement("span");
+    copo.style.left = Math.random() * 100 + "vw";
+    copo.style.animationDuration = (4 + Math.random() * 6) + "s";
+    copo.style.opacity = Math.random();
+    copo.style.transform = "scale(" + (0.5 + Math.random()) + ")";
+    contenedor.appendChild(copo);
+
+    setTimeout(() => { copo.remove(); }, 12000);
+}
+
+setInterval(crearCopo, 120);
+</script>
+<!-- ⭐ TORMENTA DE NIEVE AL HACER CLIC ⭐ -->
+<script>
+// Activar tormenta
+function tormentaNieve() {
+    let ciclos = 0;
+
+    const intervalo = setInterval(() => {
+        for (let i = 0; i < 12; i++) {
+            crearCopoTormenta();
+        }
+        ciclos++;
+        if (ciclos > 35) clearInterval(intervalo); 
+    }, 90);
+}
+
+// Copos grandes y rápidos
+function crearCopoTormenta() {
+    const contenedor = document.getElementById("nieve");
+    const copo = document.createElement("span");
+
+    copo.style.position = "absolute";
+    copo.style.top = "-20px";
+    copo.style.left = Math.random() * 100 + "vw";
+    copo.style.width = "18px";
+    copo.style.height = "18px";
+    copo.style.background = "white";
+    copo.style.borderRadius = "50%";
+    copo.style.opacity = "0.9";
+    copo.style.filter = "blur(1px)";
+    copo.style.animation = "caerTormenta " + (1.5 + Math.random()) + "s linear";
+
+    contenedor.appendChild(copo);
+    setTimeout(() => copo.remove(), 3000);
+}
+
+// Animación fuerte
+const estiloTormenta = document.createElement("style");
+estiloTormenta.textContent = `
+@keyframes caerTormenta {
+    to {
+        transform: translateY(120vh) translateX(${Math.random() * 200 - 100}px);
+        opacity: 0;
+    }
+}
+`;
+document.head.appendChild(estiloTormenta);
+
+// ⚡ ACTIVAR TORMENTA EN CUALQUIER CLIC
+document.addEventListener("click", () => {
+    tormentaNieve();
+});
+</script>
+
+
+</body>
+</html>
