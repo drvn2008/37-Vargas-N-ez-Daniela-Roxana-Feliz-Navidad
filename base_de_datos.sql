@@ -1,0 +1,109 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 08-12-2025 a las 16:38:23
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `base_de_datos`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carta`
+--
+
+CREATE TABLE `carta` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `mensaje` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carta`
+--
+
+INSERT INTO `carta` (`id`, `nombre`, `email`, `mensaje`) VALUES
+(1, '333', '34020800213631@cecytebc.edu.mx', '0'),
+(2, '333', '34020800213631@cecytebc.edu.mx', 'hola\r\n'),
+(3, '', '', ''),
+(4, 'Daniela Roxana Vargas Núñez', '234020800213631@cecytebc.edu.mx', 'como esta profe espero que tenga un buen dia que se cumplan sus deseos y que la pase muy bien con su familia');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `mensaje` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `email`, `mensaje`) VALUES
+(1, 'Daniela', '34020800213631@cecytebc.edu.mx', 'holaaa'),
+(2, '11111', '1111@cecytebc.edu.mx', '11111'),
+(3, '333', '33333@cecytebc.edu.mx', '333'),
+(4, '2222', '22@cecytebc.edu.mx', '22'),
+(5, '000000000', '0000@cecytebc.edu.mx', '00000000'),
+(6, 'Daniela', '', 'que tal'),
+(7, 'holaaa', '', ''),
+(8, '000', '33333@cecytebc.edu.mx', '000');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `carta`
+--
+ALTER TABLE `carta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `carta`
+--
+ALTER TABLE `carta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
